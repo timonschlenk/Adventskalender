@@ -1,0 +1,45 @@
+body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(./rsc/beer.jpg);}
+
+h1{
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#timer {
+    color: #333;
+    text-align: center;
+    font-size: 15vw;
+    margin-top: 50px;
+    margin-bottom: 0;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.8), /* Bright yellow inner glow */
+    0 0 20px rgba(255, 204, 0, 0.6), /* Medium yellow glow */
+    0 0 30px rgba(255, 204, 0, 0.4); /* Faint yellow outer glow */
+    font-variant-numeric: tabular-nums;
+}
+
+#event{
+    color: #333;
+    text-align: center;
+    font-size: 5vw;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.8), /* Bright yellow inner glow */
+    0 0 20px rgba(255, 204, 0, 0.6), /* Medium yellow glow */
+    0 0 30px rgba(255, 204, 0, 0.4); /* Faint yellow outer glow */
+}
+
+#nextEvent{
+    color: #696969;
+    text-align: center;
+    font-size: 2vw;
+    margin-top: 0;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.8), /* Bright yellow inner glow */
+    0 0 20px rgba(255, 204, 0, 0.6), /* Medium yellow glow */
+    0 0 30px rgba(255, 204, 0, 0.4); /* Faint yellow outer glow */
+}
