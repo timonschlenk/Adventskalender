@@ -89,6 +89,7 @@ async function renderChart() {
         },
         options: {
             responsive: true,
+            spanGaps: true,
             plugins: {
                 legend: {
                     display: true, // Show the legend
