@@ -1,4 +1,4 @@
-const OFFTIME =  41 * 60 * 60 * 1000; // Offset time in milliseconds
+const OFFTIME =  44 * 60 * 60 * 1000; // Offset time in milliseconds
 
 timer();
 
@@ -54,7 +54,7 @@ async function timer() {
 
         if(CurrentEvent.text != "subevents"){
             event.textContent = CurrentEvent.text;
-            nextEvent.textContent = "";
+            nextEvent.textContent = " 󠁁";
         } else {
             let nextSubEvent = findCurrentEvent(events.subevents);
             let subEvent = events.subevents[events.subevents.indexOf(nextSubEvent)-1];   
