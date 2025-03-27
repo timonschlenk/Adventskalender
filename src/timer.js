@@ -1,4 +1,4 @@
-const OFFTIME =  44 * 60 * 60 * 1000; // Offset time in milliseconds
+const OFFTIME =  64 * 60 * 60 * 1000; // Offset time in milliseconds
 
 timer();
 
@@ -38,12 +38,12 @@ async function timer() {
         return events;
     }
     function updateTimer() {
-        countdownTime = extractDate(CurrentEvent) - new Date() - OFFTIME; // Decrement the countdown time
+        countdownTime = (extractDate(CurrentEvent) - new Date() - OFFTIME); // Decrement the countdown time
         const hours = Math.floor((countdownTime / (1000 * 60 * 60)));
         const minutes = Math.floor((countdownTime / (1000 * 60)) % 60);
         const seconds = Math.floor((countdownTime / 1000) % 60);
 
-        document.getElementById('timer').textContent =
+        document.getElementById('timer').textContent = CurrentEvent.counting == "none" ? "00:00:00" :
             `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
     }
     function updateEvent() {
@@ -57,6 +57,7 @@ async function timer() {
             nextEvent.textContent = " 󠁁";
         } else {
             let nextSubEvent = findCurrentEvent(events.subevents);
+            console.log(JSON.stringify(nextSubEvent));
             let subEvent = events.subevents[events.subevents.indexOf(nextSubEvent)-1];   
             event.textContent = subEvent.text || '';
             nextEvent.textContent = "Nächstes Event: "+ "Um "+ nextSubEvent.time.slice(0,5) +" Uhr " + nextSubEvent.text || '';
