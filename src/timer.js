@@ -14,31 +14,24 @@ async function saveCountdownTime(countdownTime) {
 }
 
 const events = [
-    {text: "Kennenlernbierchen", time: 23},
-    {text: "Baumarkt", time: 22},
-    {text: "Trichter Bauen", time: 21},
-    {text: "Trichter Bauen", time: 20},
-    {text: "Einweihung mit Luis", time: 19},
-    {text: "FlunkyBall", time: 18},
-    {text: "Trink-Kopf", time: 17},
-    {text: "Rage Cage", time: 16},
-    {text: "Trink mal Kurz", time: 15},
-    {text: "Cluuurb", time: 14},
-    {text: "Cluuurb", time: 13},
-    {text: "Tik Tok Challenge", time: 12},
-    {text: "Deichscheissa Test", time: 11},	
-    {text: "Flunkyball", time: 10},
-    {text: "Trinkkopf", time: 9},
-    {text: "Blutskat", time: 8},
-    {text: "Deichscheissatest Teil 2", time: 7},
-    {text: "Deichscheissatest Teil 3", time: 6},
-    {text: "Deichscheissatest Teil 4", time: 5},
-    {text: "Rage Cage", time: 4},
-    {text: "Bierpong", time: 3},
-    {text: "Mathe Abi Rechnen", time: 2},
-    {text: "Trichter", time: 1},
-    {text: "Gute Nacht Bierchen", time: 0},
-    {text: "Taktische Schlafpause", time: -1}
+    {text: "Kennenlernbierchen 12:00 Uhr", time: 23},
+    {text: "Trichter Bauen 13:00 - 16:00 Uhr", time: 22},
+    {text: "Luis vom Banhof abholen 17:00 Uhr", time: 19},
+    {text: "Fußballturnier 18:00 Uhr", time: 18},
+    {text: "Flunkyball 19:00 Uhr", time: 17},
+    {text: "Döner Essen gehen 20:00 Uhr", time: 16},
+    {text: "Film schauen 21:00 -23:00 Uhr", time: 15},
+    {text: "Mitternachtsbierchen 00:00 Uhr", time: 12},
+    {text: "Flunkyball 01:00", time: 11},	
+    {text: "Brot backen 02:22 Uhr", time: 10},
+    {text: "Deichscheissatest 03:00 - 07:00 Uhr", time: 9},
+    {text: "Mathe Abi rechnen 08:00 Uhr", time: 4},
+    {text: "Frühstück holen gehen mit Wegbier 09:00 Uhr", time: 3},
+    {text: "Frühstücksbier 10:00 Uhr", time: 2},
+    {text: "Brot backen 11:11", time: 1},
+    {text: "Gute Nacht Bierchen 12:00 Uhr", time: 0},
+    {text: "Taktische Schlafpause", time: -1},
+    {text: "", time: -2}
 ];
 
 const countdownTotal = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
@@ -60,6 +53,8 @@ async function initializeTimer() {
         if (countdownTime <= 0) {
             document.getElementById('timer').textContent = "00:00:00";
             clearInterval(timerInterval);
+            document.getElementById('event').textContent = events.find(event => event.time === -1)?.text || '';
+            document.getElementById('nextEvent').textContent = "";
             return;
         }
 

@@ -43,3 +43,11 @@ h1{
     0 0 20px rgba(255, 204, 0, 0.6), /* Medium yellow glow */
     0 0 30px rgba(255, 204, 0, 0.4); /* Faint yellow outer glow */
 }
+
+canvas#chart {
+    background-color: rgb(255, 252, 240); /* Set a solid white background */
+    border: 5px solid #333; /* Optional: Add a border for better visibility */
+    border-radius: 30px; /* Optional: Add rounded corners */
+    margin: 50px;
+    height: 100px;
+}
