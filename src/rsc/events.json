@@ -1,0 +1,26 @@
+{
+    "events":
+    [
+        {"date": "29.03.2025", "time": "12:00:00", "text": "Adventskalender", "counting": "down"},
+        {"date": "30.03.2025", "time": "12:00:00", "text": "subevents", "counting": "down"},
+        {"date": "31.03.2025", "time": "12:00:00", "text": "Taktische Schlafpause", "counting": "none"}
+    ],
+    "subevents":
+    [
+        {"text": "Kennenlernbierchen", "date":"29.03.2025", "time":"12:00:00"},
+        {"text": "Trichter Bauen", "date":"29.03.2025", "time":"13:00:00"},
+        {"text": "Luis vom Banhof abholen", "date":"29.03.2025", "time":"17:00:00"},
+        {"text": "Fußballturnier", "date":"29.03.2025", "time":"18:00:00"},
+        {"text": "Flunkyball", "date":"29.03.2025", "time":"19:00:00"},
+        {"text": "Döner Essen gehen", "date":"29.03.2025", "time":"20:00:00"},
+        {"text": "Film schauen", "date":"29.03.2025", "time":"21:00:00"},
+        {"text": "Mitternachtsbierchen", "date":"30.03.2025", "time":"00:00:00"},
+        {"text": "Flunkyball", "date":"30.03.2025", "time":"01:00:00"},	
+        {"text": "Brot backen", "date":"30.03.2025", "time":"02:22:22"},
+        {"text": "Deichscheissatest", "date":"30.03.2025", "time":"03:00:00"},
+        {"text": "Mathe Abi rechnen", "date":"30.03.2025", "time":"08:00:00"},
+        {"text": "Frühstücksbier", "date":"30.03.2025", "time":"10:00:00"},
+        {"text": "Gute Nacht Bierchen", "date":"30.03.2025", "time":"12:00:00"},
+        {"text": "Taktische Schlafpause", "date":"Next"}
+    ]
+}

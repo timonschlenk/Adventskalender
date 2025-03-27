@@ -1,5 +1,5 @@
 async function fetchChartData() {
-    const response = await fetch('./data.json'); // Fetch the JSON file
+    const response = await fetch('./rsc/data.json'); // Fetch the JSON file
     const data = await response.json();
     return data;
 }
@@ -98,7 +98,7 @@ async function renderChart() {
                     display: true, // Enable the title
                     text: 'Promille Tracker', // Title text
                     font: {
-                        size: 18 // Font size for the title
+                        size: 18, // Font size for the title
                     },
                     padding: {
                         top: 10,
