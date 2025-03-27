@@ -1,5 +1,5 @@
-const OFFTIME =  64 * 60 * 60 * 1000; // Offset time in milliseconds
-
+const OFFTIME =  - (1 * 60 * 60 * 1000); // Offset time in milliseconds
+const STUNDE_DES_SCHICKSALS = new Date("2025-03-30T03:00:00");
 timer();
 
 async function timer() {
@@ -17,7 +17,7 @@ async function timer() {
     function findCurrentEvent(events) {
         for (let i = 0; i < events.length; i++) {
             const event = events[i];
-            if (extractDate(event)-OFFTIME > new Date()) {
+            if (extractDate(event)-((STUNDE_DES_SCHICKSALS < new Date())?OFFTIME:0) > new Date()) {
                 console.log(JSON.stringify(event));
                 return event;
             }
@@ -38,7 +38,8 @@ async function timer() {
         return events;
     }
     function updateTimer() {
-        countdownTime = (extractDate(CurrentEvent) - new Date() - OFFTIME); // Decrement the countdown time
+        console.log(-((STUNDE_DES_SCHICKSALS < new Date())?OFFTIME:0));
+        countdownTime = (extractDate(CurrentEvent) - new Date() -((STUNDE_DES_SCHICKSALS < new Date())?OFFTIME:0)); // Decrement the countdown time
         const hours = Math.floor((countdownTime / (1000 * 60 * 60)));
         const minutes = Math.floor((countdownTime / (1000 * 60)) % 60);
         const seconds = Math.floor((countdownTime / 1000) % 60);
