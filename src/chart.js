@@ -128,4 +128,4 @@ async function renderChart() {
 renderChart();
 
 const canvas = document.getElementById('chart');
-canvas.height = 110; // Set the height to 100px
+canvas.height = 90; // Set the height to 100px
