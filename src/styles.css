@@ -50,6 +50,6 @@ canvas#chart {
     background-color: rgb(255, 252, 240); /* Set a solid white background */
     border: 5px solid #333; /* Optional: Add a border for better visibility */
     border-radius: 30px; /* Optional: Add rounded corners */
-    margin: 50px;
+    margin: 100px 200px 0 200px;
     height: 100px;
 }
