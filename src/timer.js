@@ -1,3 +1,5 @@
+const OFFTIME =  41 * 60 * 60 * 1000; // Offset time in milliseconds
+
 timer();
 
 async function timer() {
@@ -5,7 +7,7 @@ async function timer() {
 
     let CurrentEvent = findCurrentEvent(events.events); // Find the current event
     let countdownTime = extractDate(CurrentEvent) - new Date(); // Calculate the countdown time
-    
+
     let timerInterval = setInterval(updateTimer, 1000); // Start the timer
     let eventInterval = setInterval(updateEvent, 1000); // Start the timer
     updateTimer();
@@ -15,7 +17,8 @@ async function timer() {
     function findCurrentEvent(events) {
         for (let i = 0; i < events.length; i++) {
             const event = events[i];
-            if (extractDate(event) > new Date()) {
+            if (extractDate(event)-OFFTIME > new Date()) {
+                console.log(JSON.stringify(event));
                 return event;
             }
         }
@@ -35,13 +38,7 @@ async function timer() {
         return events;
     }
     function updateTimer() {
-        if (countdownTime <= 0) {
-            CurrentEvent = findCurrentEvent(events.events);
-            clearInterval(timerInterval); // Stop the timer
-            return;
-        }
-
-        countdownTime -= 1000; // Decrement the countdown time
+        countdownTime = extractDate(CurrentEvent) - new Date() - OFFTIME; // Decrement the countdown time
         const hours = Math.floor((countdownTime / (1000 * 60 * 60)));
         const minutes = Math.floor((countdownTime / (1000 * 60)) % 60);
         const seconds = Math.floor((countdownTime / 1000) % 60);
@@ -52,14 +49,17 @@ async function timer() {
     function updateEvent() {
         const event = document.getElementById('event');
         const nextEvent = document.getElementById('nextEvent');
+
+        CurrentEvent = findCurrentEvent(events.events);
+
         if(CurrentEvent.text != "subevents"){
             event.textContent = CurrentEvent.text;
             nextEvent.textContent = "";
         } else {
-            let nextSubEvent = findCurrentEvent(CurrentEvent.subevents);
-            let subEvent = CurrentEvent.subevents[indexOf(nextSubEvent)-1];   
+            let nextSubEvent = findCurrentEvent(events.subevents);
+            let subEvent = events.subevents[events.subevents.indexOf(nextSubEvent)-1];   
             event.textContent = subEvent.text || '';
-            nextEvent.textContent = "Nächstes Event: " + nextSubEvent.text || '';
+            nextEvent.textContent = "Nächstes Event: "+ "Um "+ nextSubEvent.time.slice(0,5) +" Uhr " + nextSubEvent.text || '';
         }
     }
 }
