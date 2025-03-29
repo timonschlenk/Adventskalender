@@ -1,18 +1,17 @@
 {
     "events":
     [
-        {"date": "29.03.2025", "time": "12:00:00", "text": "Adventskalender", "counting": "down"},
-        {"date": "30.03.2025", "time": "12:00:00", "text": "subevents", "counting": "down"},
-        {"date": "31.03.2025", "time": "12:00:00", "text": "Taktische Schlafpause", "counting": "none"}
+        {"date": "29.03.2025", "time": "13:00:00", "text": "Adventskalender", "counting": "down"},
+        {"date": "30.03.2025", "time": "13:00:00", "text": "subevents", "counting": "down"},
+        {"date": "31.03.2025", "time": "13:00:00", "text": "Taktische Schlafpause", "counting": "none"}
     ],
     "subevents":
     [
-        {"text": "Kennenlernbierchen", "date":"29.03.2025", "time":"12:00:00"},
-        {"text": "Flunkyball", "date":"29.03.2025", "time":"13:00:00"},
-        {"text": "Rage Cage", "date":"29.03.2025", "time":"14:00:00"},
-        {"text": "Flunkyball", "date":"29.03.2025", "time":"15:00:00"},
-        {"text": "Fußballturnier", "date":"29.03.2025", "time":"16:00:00"},
-        {"text": "Luis vom Banhof abholen", "date":"29.03.2025", "time":"17:00:00"},
+        {"text": "Kennenlernbierchen", "date":"29.03.2025", "time":"13:00:00"},
+        {"text": "Flunkyball", "date":"29.03.2025", "time":"14:00:00"},
+        {"text": "Rage Cage", "date":"29.03.2025", "time":"15:00:00"},
+        {"text": "Flunkyball", "date":"29.03.2025", "time":"16:00:00"},
+        {"text": "Fußballturnier", "date":"29.03.2025", "time":"17:00:00"},
         {"text": "Trichter Bauen", "date":"29.03.2025", "time":"18:00:00"},
         {"text": "Ron Bieletti schauen", "date":"29.03.2025", "time":"21:00:00"},
         {"text": "Mitternachtsbierchen", "date":"30.03.2025", "time":"00:00:00"},
@@ -23,7 +22,7 @@
         {"text": "Mathe Abi rechnen", "date":"30.03.2025", "time":"09:00:00"},
         {"text": "Gruppenarbeit", "date":"30.03.2025", "time":"10:00:00"},
         {"text": "Frühstücksbier", "date":"30.03.2025", "time":"12:00:00"},
-        {"text": "Gute Nacht Bierchen", "date":"30.03.2025", "time":"12:00:00"},
-        {"text": "Taktische Schlafpause", "date":"31.03.2025", "time":"12:00:00"}
+        {"text": "Gute Nacht Bierchen", "date":"30.03.2025", "time":"13:00:00"},
+        {"text": "Taktische Schlafpause", "date":"31.03.2025", "time":"13:00:00"}
     ]
 }
