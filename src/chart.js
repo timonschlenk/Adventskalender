@@ -72,8 +72,8 @@ async function renderChart() {
                 {
                     label: 'Ilke',
                     data: chartData.Ilke, // Eighth dataset values
-                    backgroundColor: 'rgba(128, 128, 128, 0.1)', // Gray fill color
-                    borderColor: 'rgb(128, 128, 128)', // Gray line color
+                    backgroundColor: 'rgba(43, 124, 129, 0.1)', // Gray fill color
+                    borderColor: 'rgb(9, 133, 155)', // Gray line color
                     borderWidth: 2,
                     tension: 0.4
                 },
