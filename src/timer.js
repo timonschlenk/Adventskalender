@@ -1,4 +1,4 @@
-const OFFTIME =  - (1 * 60 * 60 * 1000); // Offset time in milliseconds
+const OFFTIME =  - (0* 1 * 60 * 60 * 1000); // Offset time in milliseconds
 const STUNDE_DES_SCHICKSALS = new Date("2025-03-30T03:00:00");
 timer();
 
